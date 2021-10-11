@@ -16,5 +16,10 @@ namespace game
         {
             InitializeComponent();
         }
+
+        private void pictureBox61_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

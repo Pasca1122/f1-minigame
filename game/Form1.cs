@@ -12,7 +12,7 @@ namespace game
 {
     public partial class Form1 : Form
     {
-        StartForm st = new StartForm();
+        
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace game
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            StartForm st = new StartForm();
             st.Show();
         }
 

@@ -43,8 +43,27 @@ namespace game
             comboBox1.Items.Add("Mick Schumacher");
             comboBox1.Items.Add("Nikita Mazepin");
 
-            comboBox2.Items.Add("Monza");
-            
+            comboBox2.Items.Add("Bahrain Grand Prix");
+            comboBox2.Items.Add("Emilia Romagna Grand Prix");
+            comboBox2.Items.Add("Portuguese Grand Prix");
+            comboBox2.Items.Add("Spanish Grand Prix");
+            comboBox2.Items.Add("Monaco Grand Prix");
+            comboBox2.Items.Add("Azerbaijan Grand Prix");
+            comboBox2.Items.Add("French Grand Prix");
+            comboBox2.Items.Add("Austrian Grand Prix");
+            comboBox2.Items.Add("British Grand Prix");
+            comboBox2.Items.Add("Hungarian Grand Prix");
+            comboBox2.Items.Add("Belgian Grand Prix");
+            comboBox2.Items.Add("Dutch Grand Prix");
+            comboBox2.Items.Add("Italian Grand Prix");
+            comboBox2.Items.Add("Russian Grand Prix");
+            comboBox2.Items.Add("Turkish Grand Prix");
+            comboBox2.Items.Add("United States Grand Prix");
+            comboBox2.Items.Add("Mexico City Grand Prix");
+            comboBox2.Items.Add("São Paulo Grand Prix");
+            comboBox2.Items.Add("Qatar Grand Prix");
+            comboBox2.Items.Add("Saudi Arabian Grand Prix");
+            comboBox2.Items.Add("Abu Dhabi Grand Prix");
 
         }
 
@@ -56,6 +75,12 @@ namespace game
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            Track t = new Track();
+            t.Show();
         }
     }
 }

@@ -63,6 +63,26 @@ namespace game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap e6v_isluubatxxx_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("e6v-isluubatxxx-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap e6v_isluubatxxx_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("e6v-isluubatxxx-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap F1_logo {
             get {
                 object obj = ResourceManager.GetObject("F1-logo", resourceCulture);
@@ -76,6 +96,28 @@ namespace game.Properties {
         internal static System.Drawing.Bitmap grid {
             get {
                 object obj = ResourceManager.GetObject("grid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_f1_car_top_view_car_overlooking_racing_car_f1_match_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-f1-car-top-view-car-overlooking-racing-car-f1-match-removebg-prev" +
+                        "iew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_f1_car_top_view_car_overlooking_racing_car_f1_match_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-f1-car-top-view-car-overlooking-racing-car-f1-match-removebg-prev" +
+                        "iew1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

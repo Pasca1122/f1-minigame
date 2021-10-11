@@ -15,12 +15,18 @@ namespace game
         public StartForm()
         {
             InitializeComponent();
+            comboBox2.Visible = false;
+            labelTrack.Visible = false;
+            buttonStart.Visible = false;
         }
 
         private void StartForm_Load(object sender, EventArgs e)
         {
             labelDriver.Parent = pictureBox1;
             labelDriver.BackColor = Color.Transparent;
+
+            labelTrack.Parent = pictureBox1;
+            labelTrack.BackColor = Color.Transparent;
 
             comboBox1.Items.Add("Lewis Hamilton");
             comboBox1.Items.Add("Valtteri Bottas");
@@ -69,18 +75,24 @@ namespace game
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            comboBox2.Visible = true;
+            labelTrack.Visible = true;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            buttonStart.Visible = true;
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             Track t = new Track();
             t.Show();
+        }
+
+        private void labelTrack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

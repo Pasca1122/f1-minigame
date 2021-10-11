@@ -32,7 +32,7 @@ namespace game
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDriver = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTrack = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.buttonStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,7 @@ namespace game
             this.labelDriver.BackColor = System.Drawing.Color.Transparent;
             this.labelDriver.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelDriver.ForeColor = System.Drawing.Color.White;
-            this.labelDriver.Location = new System.Drawing.Point(160, 101);
+            this.labelDriver.Location = new System.Drawing.Point(151, 243);
             this.labelDriver.Name = "labelDriver";
             this.labelDriver.Size = new System.Drawing.Size(284, 41);
             this.labelDriver.TabIndex = 1;
@@ -68,32 +68,33 @@ namespace game
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(160, 161);
+            this.comboBox1.Location = new System.Drawing.Point(161, 329);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(265, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label1
+            // labelTrack
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(814, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 41);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Choose the track";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTrack.AutoSize = true;
+            this.labelTrack.BackColor = System.Drawing.Color.Transparent;
+            this.labelTrack.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTrack.ForeColor = System.Drawing.Color.White;
+            this.labelTrack.Location = new System.Drawing.Point(814, 243);
+            this.labelTrack.Name = "labelTrack";
+            this.labelTrack.Size = new System.Drawing.Size(253, 41);
+            this.labelTrack.TabIndex = 3;
+            this.labelTrack.Text = "Choose the track";
+            this.labelTrack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTrack.Click += new System.EventHandler(this.labelTrack_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(105)))), ((int)(((byte)(189)))));
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(814, 161);
+            this.comboBox2.Location = new System.Drawing.Point(824, 329);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(233, 28);
@@ -122,7 +123,7 @@ namespace game
             this.ClientSize = new System.Drawing.Size(1323, 856);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTrack);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelDriver);
             this.Controls.Add(this.pictureBox1);
@@ -142,7 +143,7 @@ namespace game
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelDriver;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTrack;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button buttonStart;
     }

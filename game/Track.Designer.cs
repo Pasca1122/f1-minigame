@@ -29,6 +29,7 @@ namespace game
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -154,6 +155,11 @@ namespace game
             this.pictureBox123 = new System.Windows.Forms.PictureBox();
             this.pictureBox124 = new System.Windows.Forms.PictureBox();
             this.pictureBox125 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.playerCar = new System.Windows.Forms.PictureBox();
+            this.enemy1 = new System.Windows.Forms.PictureBox();
+            this.enemy2 = new System.Windows.Forms.PictureBox();
+            this.labelOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -279,6 +285,9 @@ namespace game
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox123)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox124)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox125)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1406,12 +1415,65 @@ namespace game
             this.pictureBox125.TabIndex = 64;
             this.pictureBox125.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // playerCar
+            // 
+            this.playerCar.BackColor = System.Drawing.Color.Transparent;
+            this.playerCar.Image = global::game.Properties.Resources.e6v_isluubatxxx_removebg_preview1;
+            this.playerCar.Location = new System.Drawing.Point(256, 469);
+            this.playerCar.Name = "playerCar";
+            this.playerCar.Size = new System.Drawing.Size(57, 125);
+            this.playerCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerCar.TabIndex = 125;
+            this.playerCar.TabStop = false;
+            // 
+            // enemy1
+            // 
+            this.enemy1.Image = global::game.Properties.Resources.png_transparent_f1_car_top_view_car_overlooking_racing_car_f1_match_removebg_preview1;
+            this.enemy1.Location = new System.Drawing.Point(150, 156);
+            this.enemy1.Name = "enemy1";
+            this.enemy1.Size = new System.Drawing.Size(61, 126);
+            this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy1.TabIndex = 126;
+            this.enemy1.TabStop = false;
+            // 
+            // enemy2
+            // 
+            this.enemy2.Image = global::game.Properties.Resources.png_transparent_f1_car_top_view_car_overlooking_racing_car_f1_match_removebg_preview1;
+            this.enemy2.Location = new System.Drawing.Point(389, 710);
+            this.enemy2.Name = "enemy2";
+            this.enemy2.Size = new System.Drawing.Size(61, 126);
+            this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy2.TabIndex = 127;
+            this.enemy2.TabStop = false;
+            // 
+            // labelOver
+            // 
+            this.labelOver.AutoSize = true;
+            this.labelOver.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelOver.ForeColor = System.Drawing.Color.Red;
+            this.labelOver.Location = new System.Drawing.Point(132, 104);
+            this.labelOver.Name = "labelOver";
+            this.labelOver.Size = new System.Drawing.Size(318, 46);
+            this.labelOver.TabIndex = 128;
+            this.labelOver.Text = "You\'ve CRASHED!";
+            this.labelOver.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Track
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(582, 733);
+            this.Controls.Add(this.labelOver);
+            this.Controls.Add(this.enemy2);
+            this.Controls.Add(this.enemy1);
+            this.Controls.Add(this.playerCar);
             this.Controls.Add(this.pictureBox65);
             this.Controls.Add(this.pictureBox66);
             this.Controls.Add(this.pictureBox67);
@@ -1541,6 +1603,8 @@ namespace game
             this.Name = "Track";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Track";
+            this.Load += new System.EventHandler(this.Track_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Track_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1666,7 +1730,11 @@ namespace game
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox123)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox124)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox125)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1797,5 +1865,10 @@ namespace game
         private System.Windows.Forms.PictureBox pictureBox123;
         private System.Windows.Forms.PictureBox pictureBox124;
         private System.Windows.Forms.PictureBox pictureBox125;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox playerCar;
+        private System.Windows.Forms.PictureBox enemy1;
+        private System.Windows.Forms.PictureBox enemy2;
+        private System.Windows.Forms.Label labelOver;
     }
 }

@@ -12,10 +12,14 @@ namespace game
 {
     public partial class Track : Form
     {
+        int pos = 20;
         public Track()
         {
             InitializeComponent();
             labelOver.Visible = false;
+            enemy1.Visible = false;           
+            labelPosition.Text = "P" + pos;
+            labelWin.Visible = false;
         }
 
         private void pictureBox61_Click(object sender, EventArgs e)
@@ -23,33 +27,43 @@ namespace game
 
         }
         Random r = new Random();
-        int y, x;
+        int x, ok;
         private void enemy(int speed)
         {
-            if (enemy1.Top >= 1200)
+            
+            if (enemy1.Top >= 700)
             {
                 x = r.Next(125,382);
                 enemy1.Location = new Point(x, 0);
+                ok = 1;
+                if (pos == 1)
+                {
+                    pos--;
+                    enemy1.Visible = false;
+                }
             }
             else
                 enemy1.Top += speed;
-            if (enemy2.Top >= 1200)
+            if(enemy1.Top>playerCar.Top && ok == 1)
             {
-                y = r.Next(125, 382);
-                enemy2.Location = new Point(y, 0);
+                pos--;
+
+                labelPosition.Text = "P" + pos;
+                ok = 0;
             }
-            else
-                enemy2.Top += speed;
-
-
-
         }
 
         int gamespeedCar = 15;
         int gamespeedEnemy = 0;
         private void Track_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Left)
+            enemy1.Visible = true;          
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+
+            if (e.KeyCode == Keys.Left)
             {
                 if(playerCar.Left >125)
                     playerCar.Left += -gamespeedCar;
@@ -83,12 +97,17 @@ namespace game
             {
                 timer1.Enabled = false;
                 labelOver.Visible = true;
+                gamespeedCar = 0;
             }
-            if (playerCar.Bounds.IntersectsWith(enemy2.Bounds))
+            
+            if (pos == 0)
             {
                 timer1.Enabled = false;
-                labelOver.Visible = true;
+                labelWin.Visible = true;
+                gamespeedCar = 0;
+
             }
+
         }
 
         private void Track_Load(object sender, EventArgs e)
@@ -98,6 +117,11 @@ namespace game
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enemy1_Click(object sender, EventArgs e)
         {
 
         }

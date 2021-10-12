@@ -20,7 +20,7 @@ namespace game
             buttonStart.Visible = false;
         }
 
-        private void StartForm_Load(object sender, EventArgs e)
+        public void StartForm_Load(object sender, EventArgs e)
         {
             labelDriver.Parent = pictureBox1;
             labelDriver.BackColor = Color.Transparent;
@@ -73,13 +73,12 @@ namespace game
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox2.Visible = true;
             labelTrack.Visible = true;
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonStart.Visible = true;
         }
